@@ -4,7 +4,11 @@ const db = require("./database");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "DELETE"],
+    allowedHeaders: ["Content-Type"]
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
