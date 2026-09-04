@@ -77,5 +77,6 @@ app.delete("/api/tickets/:code", (req, res) => {
 const PORT = 5000;
 
 app.listen(PORT, () => {
-    console.log(`Servern kör på http://localhost:${PORT}`);
+    console.log(`Servern kör på http://localhost:${PORT}`)
 });
+module.exports = app;
